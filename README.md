@@ -7,11 +7,11 @@ Netflix rolls out price changes for our service periodically.  In order to accur
 Objective:
 Design and implement a system that hosts Netflix pricing which will enable us to systematically change prices across all our global customers.  We want to see how your system supports price changes pushed by country.
 
-Choice of Technology Solution
+Choice of Technology Solution:
 I decided to use gRPC to solve the problem. gRPC uses protocol buffers as the Interface Definition Language (IDL) for describing both the service interface and the structure of the payload messages.
 
-Alternate Technology considered
-I considered using RESTful APIs to solve the problem.
+Alternate Technology considered:
+I considered using RESTful APIs to solve the problem. One of the biggest differences between REST and gRPC is the format of the payload. REST messages typically contain JSON. gRPC, on the other hand, accepts and returns Protobuf messages which are strongly typed. The second difference is REST depends heavily on HTTP (usually HTTP 1.1) and the request-response model. On the other hand, gRPC uses the newer HTTP/2 protocol which allows for streaming requests.A single HTTP/2 TCP connection can support many bidirectional streams. These streams can be interleaved (no queuing), and multiple requests can be sent at the same time without a need to establish new TCP connections for each one. I have not made use of streaming requests capability of HTTP/2 for this project. 
 
 Service Interface design
 service PriceGuide {
