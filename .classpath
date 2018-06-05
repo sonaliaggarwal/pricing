@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/sonali9/Downloads/netty-4.1.25.Final/jar/all-in-one/netty-all-4.1.25.Final-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/sonali9/Downloads/netty-4.1.25.Final/jar/all-in-one/netty-all-4.1.25.Final.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/netty-all-4.0.9.Final.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/jar_files (1)/opencensus-api-0.14.0.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/opencensus-api-0.5.2.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/guava-22.0.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/grpc-all-1.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/grpc-core-1.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/grpc-netty-1.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/grpc-protobuf-1.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/grpc-stub-1.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/com.google.collections.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/grpc-context-1.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/grpc-protobuf-lite-1.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/netty-codec-http2-5.0.0.Alpha2.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/jar_files (2)/netty-buffer-5.0.0.Alpha2.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/jar_files (2)/netty-codec-5.0.0.Alpha2.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/jar_files (2)/netty-common-5.0.0.Alpha2.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/jar_files (2)/netty-resolver-5.0.0.Alpha2.jar"/>
+	<classpathentry kind="lib" path="/Users/sonali9/Downloads/jar_files (2)/netty-transport-5.0.0.Alpha2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

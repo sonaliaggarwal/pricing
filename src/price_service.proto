@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "protos";
+option java_outer_classname = "PriceGuideProtos";
+
+service PriceGuide {
+  // A client-to-server streaming RPC.
+  rpc updateGlobalPrices(AllCountryPrice) returns (Status) {};
+  rpc getPriceForCountry(CountryRequest) returns (CountryPrice) {};
+  rpc getPriceForCustomer(CustomerRequest) returns (CustomerPrice) {};
+}
+
+message CustomerRequest{
+	string id = 1;
+}
+message CustomerPrice{
+	int32 price = 1;
+}
+
+message CustomerInfo{
+	string id = 1;
+	string country = 2;
+	string plan = 3;
+}
+message AllCountryPrice {
+  repeated CountryPrice countryPrice = 1;
+}
+
+message Status {
+ enum StatusType {
+    OK = 0;
+    ERROR = 1;
+  }
+  StatusType stat = 1;
+}
+
+message CountryRequest {
+  string country = 1;
+} 
+
+message CountryPrice {
+  string country = 1;
+  int32 price1S = 2;
+  int32 price2S = 3;
+  int32 price4S = 4;
+  string currency = 5;
+}
