@@ -14,16 +14,24 @@ Alternate Technology considered:
 I considered using RESTful APIs to solve the problem. One of the biggest differences between REST and gRPC is the format of the payload. REST messages typically contain JSON. gRPC, on the other hand, accepts and returns Protobuf messages which are strongly typed. The second difference is REST depends heavily on HTTP (usually HTTP 1.1) and the request-response model. On the other hand, gRPC uses the newer HTTP/2 protocol which allows for streaming requests.A single HTTP/2 TCP connection can support many bidirectional streams. These streams can be interleaved (no queuing), and multiple requests can be sent at the same time without a need to establish new TCP connections for each one. I have not made use of streaming requests capability of HTTP/2 for this project. 
 
 Service Interface design
+
 service PriceGuide {
-  // A client-to-server streaming RPC.
-  rpc updateGlobalPrices(AllCountryPrice) returns (Status) {};
-  rpc getPriceForCountry(CountryRequest) returns (CountryPrice) {};
-  rpc getPriceForCustomer(CustomerRequest) returns (CustomerPrice) {};
+
+// A client-to-server streaming RPC.
+
+rpc updateGlobalPrices(AllCountryPrice) returns (Status) {};
+
+rpc getPriceForCountry(CountryRequest) returns (CountryPrice) {};
+
+rpc getPriceForCustomer(CustomerRequest) returns (CustomerPrice) {};
+
 }
 
 
 rpc updateGlobalPrices uses as input the repeated list of countries and their prices for three different plans and returns a status (success, no error) to determine if the operation succeeded.
-rpc getPriceForCountry returns the pricing information of the three different plans for the requested country 
+
+rpc getPriceForCountry returns the pricing information of the three different plans for the requested country.
+
 rpc getPriceForCustomer returns the pricing information for the customer depending on his country and his plan type.
 
 Design decisions
